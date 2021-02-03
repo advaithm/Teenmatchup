@@ -24,7 +24,7 @@
     </header>
     <div class="padded">
         <h4 align="center">None of the information provided will be made public</h4></br>
-        <a class="required">*</a>required
+        <a class="required">* </a>required
         <form method="POST" name="matchform" id="matchform">
             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <label>Your reddit username in the form u/your_user_name</label>
@@ -61,7 +61,7 @@
                 this checkbox you agree we
                 are not
                 liable for anything that happens.</a></br>
-            <input type="submit" name="submit" id="submit" class="btn btn-primary" value="Submit Form">
+            <input type="submit" name="submit" id="submit" class="btn btn-primary" value="Submit Form" disabled=true>
         </form>
     </div>
     <script>
