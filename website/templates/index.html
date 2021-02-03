@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Find A Friend</title>
+    <style>
+        .padded {
+            margin-left: 10%;
+            margin-top: 5%;
+            margin-right: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="text-align: center;">
+        <h1>Enter Your Detials To Find A Friend</h1>
+    </header>
+    <div class="padded">
+        <h4 align="center">None of the information provided will be made public</h4>
+        <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <label>Your reddit username in the form u/your_user_name</label>
+            <input type="text" class="form-control" name="username" id="username"
+                placeholder="u/example_user_name"></br>
+            <label>Your Email (so we can send you your</label>
+            <input type="email" class="form-control" name="email" id="email"></br>
+            <Label>Which hobby is your favorite</Label>
+            <select class="form-select" name="hobby" id="hobby">
+                <option value="1">Programing</option>
+                <option value="2">Anime</option>
+                <option value="3">Litrature(reading stuff)</option>
+                <option value="4">Art</option>
+            </select></br>
+            <label>Subclutre(idk what to call this) you associate with the most</label>
+            <select class="form-select" name="subcult" id="subcult">
+                <option value="1">Nerd/Hacker</option>
+                <option value="2">Weeb</option>
+                <!--owo?-->
+                <option value="3">Furries</option>
+                <option value="4">Gammer</option>
+                <option value="5">Other</option>
+            </select></br>
+            <label>What are you?</label>
+            <select class="form-select" name="outdoor" id="outdoor">
+                <option value="1">A out door person</option>
+                <option value="2">Hisss light burns me</option>
+                <option value="3">A bit of both</option>
+            </select></br>
+            <label>A bit about yourself (this will be sent to your match)</label>
+            <textarea class="form-control" id="description" name="description"></textarea></br>
+            <input type="submit" class="btn btn-primary" value="Submit Form">
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
